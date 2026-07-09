@@ -4,25 +4,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doctors</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="patients.html">Patients</a></li>
-        <li><a href="appointments.html">Appointments</a></li>
-        <li><a href="medicines.html">Medicines</a></li>
-        <li><a href="billing.html">Billing</a></li>
-        <li><a href="doctors.html">Doctors</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-      </ul>
-    </nav>
+    <div class="page-shell doctor-page">
+      <header class="clinic-header">
+        <div class="header-left">
+          <div class="logo">🩺 Doctor Desk</div>
+          <p class="tagline">A clear view of the clinic's medical team.</p>
+        </div>
+        <a class="header-link" href="../index.html">Back Home</a>
+      </header>
 
-    <h1>Doctors</h1>
-    <p>Placeholder for doctor management.</p>
+      <nav class="top-nav" aria-label="Doctor view navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="patients.html">Patients</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="medicines.html">Medicines</a></li>
+          <li><a href="billing.html">Billing</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+
+      <main class="doctor-main">
+        <section class="section-block doctor-summary">
+          <div class="section-heading">
+            <h1>Doctors</h1>
+            <p>Browse active specialists, their schedules, and care focus areas.</p>
+          </div>
+
+          <div class="doctor-overview">
+            <div class="overview-card">
+              <strong>8</strong>
+              <span>Specialists available</span>
+            </div>
+            <div class="overview-card">
+              <strong>4</strong>
+              <span>Open consult slots</span>
+            </div>
+            <div class="overview-card">
+              <strong>95%</strong>
+              <span>Appointment readiness</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-heading">
+            <h2>Medical team</h2>
+            <p>Each doctor card highlights availability and clinical focus.</p>
+          </div>
+
+          <div class="doctor-grid">
+            <article class="doctor-card">
+              <div class="doctor-card-top">
+                <h3>Dr. Asha Perera</h3>
+                <span class="role-badge">Cardiology</span>
+              </div>
+              <p>Leads preventive heart care and adult wellness visits.</p>
+              <ul class="doctor-meta">
+                <li>Mon, Wed, Fri</li>
+                <li>09:00 - 16:00</li>
+              </ul>
+            </article>
+
+            <article class="doctor-card">
+              <div class="doctor-card-top">
+                <h3>Dr. Nimal Fernando</h3>
+                <span class="role-badge">Pediatrics</span>
+              </div>
+              <p>Specializes in child growth, immunizations, and family care.</p>
+              <ul class="doctor-meta">
+                <li>Tue, Thu, Sat</li>
+                <li>10:00 - 17:00</li>
+              </ul>
+            </article>
+
+            <article class="doctor-card">
+              <div class="doctor-card-top">
+                <h3>Dr. Kavindi Silva</h3>
+                <span class="role-badge">Dermatology</span>
+              </div>
+              <p>Focuses on skin health, treatment plans, and follow-up care.</p>
+              <ul class="doctor-meta">
+                <li>Daily</li>
+                <li>08:30 - 15:30</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
