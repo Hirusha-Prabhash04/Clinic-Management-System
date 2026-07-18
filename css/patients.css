@@ -1,0 +1,34 @@
+.card{
+    border:none;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+body{
+    background:#f5f6fb;
+}
+
+.nav-pills .nav-link{
+    color:#A64931;
+    font-weight:600;
+    border-radius:20px;
+}
+
+.nav-pills .nav-link.active{
+    background:#A64931;
+    color:white;
+}
+
+.nav-pills .nav-link:hover{
+    background:#d8c2bc;
+    color:#A64931;
+}
+
+.btn-primary{
+    background:#A64931;
+    border:none;
+}
+
+.btn-primary:hover{
+    background:#8f3d28;
+}

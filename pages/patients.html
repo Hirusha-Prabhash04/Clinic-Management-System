@@ -1,28 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patients</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="patients.html">Patients</a></li>
-        <li><a href="appointments.html">Appointments</a></li>
-        <li><a href="medicines.html">Medicines</a></li>
-        <li><a href="billing.html">Billing</a></li>
-        <li><a href="doctors.html">Doctors</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-      </ul>
-    </nav>
 
-    <h1>Patients Page</h1>
-    <p>Placeholder for patient management</p>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Patients</title>
+  <link rel="stylesheet" href="../css/patients.css">
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="patients.html">Patients</a></li>
+      <li><a href="appointments.html">Appointments</a></li>
+      <li><a href="medicines.html">Medicines</a></li>
+      <li><a href="billing.html">Billing</a></li>
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid py-4">
+
+    <!-- Top Row -->
+    <div class="row g-4">
+
+      <div class="col-12 col-md-6 col-lg-3">
+
+        <div class="card shadow border-0 rounded-4 h-100">
+
+          <div class="card-body text-center">
+
+            <img src="../assets/man-profile_1083548-15963.avif" class="rounded-circle mb-3" width="110">
+
+            <h4>Ahmed Salah</h4>
+
+            <p class="text-secondary">
+              Send Message
+            </p>
+
+            <hr>
+
+            <small class="text-muted">
+              Next Appointment
+            </small>
+
+            <h5>Nov 24th 10PM</h5>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="row">
+
+          <div class="col-md-6">
+            Date of Birth
+          </div>
+
+          <div class="col-md-6">
+            Phone
+          </div>
+
+          <div class="col-md-6">
+            Social Number
+          </div>
+
+          <div class="col-md-6">
+            Gender
+          </div>
+
+          ...
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card rounded-4 shadow-sm">
+
+          <div class="card-body">
+
+            Calendar Here
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Row -->
+    <div class="row mt-4">
+
+      <div class="col-12">
+
+        <div class="card shadow rounded-4">
+
+          <div class="card-body">
+
+            <!-- Header -->
+            <div class="row align-items-center mb-4">
+
+              <!-- Title -->
+              <div class="col-lg-3 col-md-12 mb-3 mb-lg-0">
+                <h2 class="fw-bold mb-0">Appointments</h2>
+              </div>
+
+              <!-- Tabs -->
+              <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+
+                <ul class="nav nav-pills justify-content-center">
+
+                  <li class="nav-item">
+                    <button id="upcomingBtn" class="nav-link active" onclick="showUpcoming()">
+                      Upcoming
+                    </button>
+                  </li>
+
+                  <li class="nav-item ms-2">
+                    <button id="pastBtn" class="nav-link" onclick="showPast()">
+                      Past
+                    </button>
+                  </li>
+
+                </ul>
+
+              </div>
+
+              <!-- Search -->
+              <div class="col-lg-5 col-md-6">
+
+                <div class="input-group">
+
+                  <input type="text" class="form-control" placeholder="Search appointments">
+
+                  <button class="btn btn-primary">
+
+                    🔍
+
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Appointment Table -->
+            <div class="table-responsive">
+
+              <table class="table table-hover align-middle">
+
+                <thead class="table-light">
+
+                  <tr>
+
+                    <th>Appointment ID</th>
+                    <th>Doctor</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Action</th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody id="appointmentTable">
+
+                  <!-- JavaScript will insert rows here -->
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="../js/patient.js"></script>
+</body>
+
 </html>
