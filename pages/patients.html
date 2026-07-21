@@ -131,7 +131,7 @@
 
               <h3 id="monthYear" class="fw-bold mb-0"></h3>
 
-              <div >
+              <div>
 
                 <button class="btn btn-sm calendar-btn" onclick="changeMonth(-1)">
                   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
@@ -190,17 +190,20 @@
             <div class="row align-items-center mb-4">
 
               <!-- Title -->
-              <div class="col-lg-3 col-md-12 mb-3 mb-lg-0">
+              <div class=" text-center text-md-start col-lg-4 col-md-6 order-md-1">
+
                 <h2 class="fw-bold mb-0">Appointments</h2>
               </div>
 
-              <!-- Tabs -->
-              <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
 
-                <ul class="nav nav-pills justify-content-center">
+
+              <!-- Tabs -->
+              <div class="col-lg-4 col-md-4 order-md-3 order-lg-2 mt-md-3 mb-3 mt-3 d-flex justify-content-center">
+
+                <ul class="nav nav-pills ">
 
                   <li class="nav-item">
-                    <button id="upcomingBtn" class="nav-link active" onclick="showUpcoming()">
+                    <button id="upcomingBtn" class="nav-link active btn-primary" onclick="showUpcoming()">
                       Upcoming
                     </button>
                   </li>
@@ -216,18 +219,20 @@
               </div>
 
               <!-- Search -->
-              <div class="col-lg-5 col-md-6">
+              <div class="col-lg-4 col-md-6 order-md-2">
 
-                <div class="input-group">
-
-                  <input type="text" class="form-control" placeholder="Search appointments">
-
-                  <button class="btn btn-primary">
-
-                    🔍
-
-                  </button>
-
+                <div class="search-bar ">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..." aria-label="Search"
+                      aria-describedby="search-addon">
+                    <button class="btn btn-outline-light" type="button" id="search-addon">
+                      <svg xmlns="http://www.w3.org/2000/svg"  width="23" height="23" fill="currentColor"
+                        class="bi bi-search " viewBox="0 0 16 16">
+                        <path
+                          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
 
               </div>

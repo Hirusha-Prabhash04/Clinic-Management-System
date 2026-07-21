@@ -35,28 +35,44 @@ nav a:hover {
 }
 
 .nav-pills .nav-link {
-  color: #a64931;
+  color: #0d6efd;
   font-weight: 600;
   border-radius: 20px;
 }
 
 .nav-pills .nav-link.active {
-  background: #a64931;
+  background: #0d6efd;
   color: white;
 }
 
 .nav-pills .nav-link:hover {
-  background: #d8c2bc;
-  color: #a64931;
+  background: #3a85f5;
+  color: white;
 }
 
-.btn-primary {
-  background: #a64931;
-  border: none;
+/* search-bar-for-table */
+.search-bar {
+    max-width: 500px;
+    margin: auto auto;
+    
 }
 
-.btn-primary:hover {
-  background: #8f3d28;
+.search-bar .input-group {
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar .form-control {
+    border: none;
+    border-color: rgb(175, 168, 168);
+    padding-left: 20px;
+}
+
+.search-bar .btn {
+    border: none;
+    padding: 10px 20px;
+    background-color: #0d6efd;
 }
 
 
