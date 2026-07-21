@@ -1,3 +1,31 @@
+nav {
+  margin: 20px 0;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+}
+
+nav a {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #007bff;
+  border-radius: 6px;
+  color: #007bff;
+  text-decoration: none;
+  background-color: white;
+}
+
+nav a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+
 .card{
     border:none;
     border-radius:20px;
