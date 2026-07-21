@@ -58,6 +58,27 @@ const pastAppointments = [
     time: "08:45 AM",
     status: "Completed",
   },
+  {
+    id: "A007",
+    doctor: "Dr. Laura Adams",
+    date: "2026-06-25",
+    time: "01:15 PM",
+    status: "Completed",
+  },
+  {
+    id: "A008",
+    doctor: "Dr. James Taylor",
+    date: "2026-06-10",
+    time: "10:30 AM",
+    status: "Completed",
+  },
+  {
+    id: "A009",
+    doctor: "Dr. Lisa Martin",
+    date: "2026-05-15",
+    time: "02:45 PM",
+    status: "Completed",
+  }
 ];
 
 function loadAppointments(data) {
