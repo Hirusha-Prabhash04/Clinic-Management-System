@@ -1,78 +1,72 @@
 function showUpcoming() {
+  document.getElementById("upcomingBtn").classList.add("active");
+  document.getElementById("pastBtn").classList.remove("active");
 
-    document.getElementById("upcomingBtn").classList.add("active");
-    document.getElementById("pastBtn").classList.remove("active");
-
-    // Load Upcoming appointments here
-
+  // Load Upcoming appointments here
 }
 
 function showPast() {
+  document.getElementById("pastBtn").classList.add("active");
+  document.getElementById("upcomingBtn").classList.remove("active");
 
-    document.getElementById("pastBtn").classList.add("active");
-    document.getElementById("upcomingBtn").classList.remove("active");
-
-    // Load Past appointments here
-
+  // Load Past appointments here
 }
 
 const upcomingAppointments = [
-    {
-        id: "A001",
-        doctor: "Dr. John Smith",
-        date: "2026-08-02",
-        time: "09:30 AM",
-        status: "Upcoming"
-    },
-    {
-        id: "A002",
-        doctor: "Dr. Emily Brown",
-        date: "2026-08-05",
-        time: "11:00 AM",
-        status: "Upcoming"
-    },
-    {
-        id: "A003",
-        doctor: "Dr. Michael Lee",
-        date: "2026-08-10",
-        time: "02:00 PM",
-        status: "Upcoming"
-    }
+  {
+    id: "A001",
+    doctor: "Dr. John Smith",
+    date: "2026-08-02",
+    time: "09:30 AM",
+    status: "Upcoming",
+  },
+  {
+    id: "A002",
+    doctor: "Dr. Emily Brown",
+    date: "2026-08-05",
+    time: "11:00 AM",
+    status: "Upcoming",
+  },
+  {
+    id: "A003",
+    doctor: "Dr. Michael Lee",
+    date: "2026-08-10",
+    time: "02:00 PM",
+    status: "Upcoming",
+  },
 ];
 
 const pastAppointments = [
-    {
-        id: "A004",
-        doctor: "Dr. David Silva",
-        date: "2026-07-18",
-        time: "10:00 AM",
-        status: "Completed"
-    },
-    {
-        id: "A005",
-        doctor: "Dr. Sarah Wilson",
-        date: "2026-07-10",
-        time: "03:30 PM",
-        status: "Completed"
-    },
-    {
-        id: "A006",
-        doctor: "Dr. Robert Green",
-        date: "2026-07-02",
-        time: "08:45 AM",
-        status: "Completed"
-    }
+  {
+    id: "A004",
+    doctor: "Dr. David Silva",
+    date: "2026-07-18",
+    time: "10:00 AM",
+    status: "Completed",
+  },
+  {
+    id: "A005",
+    doctor: "Dr. Sarah Wilson",
+    date: "2026-07-10",
+    time: "03:30 PM",
+    status: "Completed",
+  },
+  {
+    id: "A006",
+    doctor: "Dr. Robert Green",
+    date: "2026-07-02",
+    time: "08:45 AM",
+    status: "Completed",
+  },
 ];
 
 function loadAppointments(data) {
+  const table = document.getElementById("appointmentTable");
 
-    const table = document.getElementById("appointmentTable");
+  table.innerHTML = "";
 
-    table.innerHTML = "";
-
-    data.forEach((appointment) => {
-
-        table.innerHTML += `
+  data.forEach((appointment) => {
+    table.innerHTML += `
             <tr>
 
                 <td>${appointment.id}</td>
@@ -85,9 +79,9 @@ function loadAppointments(data) {
 
                 <td>
                     <span class="badge ${
-                        appointment.status === "Upcoming"
-                            ? "bg-warning text-dark"
-                            : "bg-success"
+                      appointment.status === "Upcoming"
+                        ? "bg-warning text-dark"
+                        : "bg-success"
                     }">
                         ${appointment.status}
                     </span>
@@ -101,31 +95,112 @@ function loadAppointments(data) {
 
             </tr>
         `;
-
-    });
-
+  });
 }
 
 function showUpcoming() {
+  document.getElementById("upcomingBtn").classList.add("active");
+  document.getElementById("pastBtn").classList.remove("active");
 
-    document.getElementById("upcomingBtn").classList.add("active");
-    document.getElementById("pastBtn").classList.remove("active");
-
-    loadAppointments(upcomingAppointments);
-
+  loadAppointments(upcomingAppointments);
 }
 
 function showPast() {
+  document.getElementById("pastBtn").classList.add("active");
+  document.getElementById("upcomingBtn").classList.remove("active");
 
-    document.getElementById("pastBtn").classList.add("active");
-    document.getElementById("upcomingBtn").classList.remove("active");
-
-    loadAppointments(pastAppointments);
-
+  loadAppointments(pastAppointments);
 }
 
 window.onload = function () {
-
-    showUpcoming();
-
+  showUpcoming();
 };
+
+// calander
+
+const monthYear = document.getElementById("monthYear");
+const calendarDays = document.getElementById("calendarDays");
+
+let currentDate = new Date();
+
+function renderCalendar() {
+  calendarDays.innerHTML = "";
+
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  monthYear.innerHTML = `${months[month]} ${year}`;
+
+  const firstDay = new Date(year, month, 1).getDay();
+
+  const lastDate = new Date(year, month + 1, 0).getDate();
+
+  const prevLastDate = new Date(year, month, 0).getDate();
+
+  const today = new Date();
+
+  // Previous month's dates
+
+  for (let i = firstDay; i > 0; i--) {
+    calendarDays.innerHTML += `
+        <div class="other-month">
+            ${prevLastDate - i + 1}
+        </div>
+        `;
+  }
+
+  // Current month
+
+  for (let i = 1; i <= lastDate; i++) {
+    let cls = "";
+
+    if (
+      i === today.getDate() &&
+      month === today.getMonth() &&
+      year === today.getFullYear()
+    ) {
+      cls = "today";
+    }
+
+    calendarDays.innerHTML += `
+        <div class="${cls}">
+            ${i}
+        </div>
+        `;
+  }
+
+  const totalBoxes = calendarDays.children.length;
+
+  const remaining = 42 - totalBoxes;
+
+  for (let i = 1; i <= remaining; i++) {
+    calendarDays.innerHTML += `
+        <div class="other-month">
+            ${i}
+        </div>
+        `;
+  }
+}
+
+function changeMonth(value) {
+  currentDate.setMonth(currentDate.getMonth() + value);
+
+  renderCalendar();
+}
+
+renderCalendar();

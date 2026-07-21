@@ -1,8 +1,8 @@
 nav {
   margin: 20px 0;
 }
-body{
-    background-color: #eff5ff;
+body {
+  background-color: #eff5ff;
 }
 
 nav ul {
@@ -28,36 +28,97 @@ nav a:hover {
   color: white;
 }
 
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
 
-.card{
-    border:none;
-    border-radius:20px;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
+.nav-pills .nav-link {
+  color: #a64931;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.nav-pills .nav-link.active {
+  background: #a64931;
+  color: white;
+}
+
+.nav-pills .nav-link:hover {
+  background: #d8c2bc;
+  color: #a64931;
+}
+
+.btn-primary {
+  background: #a64931;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #8f3d28;
 }
 
 
+/* calander */
 
-.nav-pills .nav-link{
-    color:#A64931;
-    font-weight:600;
-    border-radius:20px;
+.calendar {
+  width: 100%;
+  height: auto;
 }
 
-.nav-pills .nav-link.active{
-    background:#A64931;
-    color:white;
+.week-days,
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
 }
 
-.nav-pills .nav-link:hover{
-    background:#d8c2bc;
-    color:#A64931;
+.week-days div {
+  font-weight: 600;
+  color: #1874fd;
+  margin-bottom: 15px;
 }
 
-.btn-primary{
-    background:#A64931;
-    border:none;
+.days div {
+  width: 22px;
+  height: 22px;
+
+  margin: auto;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: 0.25s;
 }
 
-.btn-primary:hover{
-    background:#8f3d28;
+.days div:hover {
+  background: grey;
+  color: white;
+}
+
+.today {
+  background: #1874fd;
+  color: white;
+  font-weight: bold;
+}
+
+.other-month {
+  color: #bdbdbd;
+}
+
+.calendar-btn {
+  border: none;
+  background: none;
+  font-size: 22px;
+  color: #666;
+}
+
+.calendar-btn:hover {
+  color: #9b59b6;
 }

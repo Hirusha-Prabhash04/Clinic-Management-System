@@ -32,7 +32,7 @@
     <!-- Top Row -->
     <div class="row g-4">
 
-      <div class="col-12 col-md-6 col-lg-3 order-md-1">
+      <div class="col-12 col-md-6 col-lg-3 order-md-1 align-items-stretch">
 
         <div class="card shadow border-0 rounded-4 h-100">
 
@@ -43,7 +43,17 @@
             <h4>Ahmed Salah</h4>
 
             <p class="text-secondary">
-              Send Message
+              <a class="icon-link icon-link-hover text-decoration-none" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-envelope-arrow-up" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4.5a.5.5 0 0 1-1 0V5.383l-7 4.2-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-1.99zm1 7.105 4.708-2.897L1 5.383zM1 4v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1" />
+                  <path
+                    d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.354-5.354 1.25 1.25a.5.5 0 0 1-.708.708L13 12.207V14a.5.5 0 0 1-1 0v-1.717l-.28.305a.5.5 0 0 1-.737-.676l1.149-1.25a.5.5 0 0 1 .722-.016" />
+                </svg>
+                Send Massage
+
+              </a>
             </p>
 
             <hr>
@@ -59,7 +69,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-lg-5 order-md-3">
+      <div class="col-12 col-lg-5 order-md-3 align-items-stretch">
 
 
         <div class="card shadow rounded-4">
@@ -111,16 +121,58 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4 order-md-2 order-lg-3">
-        <div class="card rounded-4 shadow-sm">
+      <div class="col-12 col-md-6 col-lg-4 order-md-2 order-lg-3 align-items-stretch">
 
-          <div class="card-body">
+        <div class="card shadow rounded-4 border-0">
 
-            Calendar Here
+          <div class="card-body p-3">
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+
+              <h3 id="monthYear" class="fw-bold mb-0"></h3>
+
+              <div >
+
+                <button class="btn btn-sm calendar-btn" onclick="changeMonth(-1)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                    <path
+                      d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                  </svg>
+                </button>
+
+                <button class="btn btn-sm calendar-btn" onclick="changeMonth(1)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                    <path
+                      d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+
+              </div>
+
+            </div>
+
+            <div class="calendar">
+
+              <div class="week-days">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+              </div>
+
+              <div id="calendarDays" class="days"></div>
+
+            </div>
 
           </div>
 
         </div>
+
       </div>
 
     </div>
