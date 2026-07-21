@@ -71,11 +71,11 @@ function loadAppointments(data) {
 
                 <td>${appointment.id}</td>
 
-                <td>${appointment.doctor}</td>
+                <td>${appointment.time}</td>
 
                 <td>${appointment.date}</td>
 
-                <td>${appointment.time}</td>
+                <td>${appointment.doctor}</td>
 
                 <td>
                     <span class="badge ${
@@ -85,12 +85,6 @@ function loadAppointments(data) {
                     }">
                         ${appointment.status}
                     </span>
-                </td>
-
-                <td>
-                    <button class="btn btn-sm btn-outline-primary">
-                        View
-                    </button>
                 </td>
 
             </tr>
