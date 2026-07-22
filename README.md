@@ -38,6 +38,32 @@ The system reduces manual workload, improves data accuracy, enhances information
 
 ---
 
+## 📂 Project Structure
+
+```text
+Clinic-Management-System/
+├── README.md
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   ├── app.js
+│   └── patient.js
+├── pages/
+│   ├── about.html
+│   ├── appointments.html
+│   ├── billing.html
+│   ├── dashboard.html
+│   ├── doctors.html
+│   ├── faq.html
+│   ├── feedback.html
+│   ├── healthtip.html
+│   ├── medicines.html
+│   └── patients.html
+└── assets/
+    └── man-profile_1083548-15963.avif
+```
+
 ---
 
 ## 🖥️ Included Pages
@@ -65,7 +91,7 @@ The system reduces manual workload, improves data accuracy, enhances information
 
 ## 📸 Screenshots
 
-![Clinic Management System Screenshot](assets/image.png)
+![Clinic Management System Screenshot](assets/dashboard.png)
 ---
 
 ## 👥 Contributors
