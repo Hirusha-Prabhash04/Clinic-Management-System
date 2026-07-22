@@ -38,27 +38,6 @@ The system reduces manual workload, improves data accuracy, enhances information
 
 ---
 
-## 📂 Project Structure
-Clinic-Management-System/
-│
-├── index.html # Main homepage
-│
-├── css/ # Stylesheets
-│
-├── js/ # JavaScript files
-│
-├── pages/ # Feature pages
-│ ├── dashboard
-│ ├── patients
-│ ├── appointments
-│ ├── medicines
-│ ├── billing
-│ └── doctors
-| |__ about
-│ |__ FAQ
-└── assets/ # Images and static resources
-
-
 ---
 
 ## 🖥️ Included Pages
