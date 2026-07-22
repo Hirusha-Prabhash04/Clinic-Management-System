@@ -91,7 +91,7 @@ Clinic-Management-System/
 
 ## 📸 Screenshots
 
-![Clinic Management System Screenshot](assets/image.png)
+![Clinic Management System Screenshot](assets/dashboard.png)
 ---
 
 ## 👥 Contributors
