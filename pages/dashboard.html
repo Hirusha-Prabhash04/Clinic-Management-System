@@ -7,32 +7,89 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="patients.html">Patients</a></li>
-        <li><a href="appointments.html">Appointments</a></li>
-        <li><a href="medicines.html">Medicines</a></li>
-        <li><a href="billing.html">Billing</a></li>
-        <li><a href="doctors.html">Doctors</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-      </ul>
-    </nav>
+    <div class="page-shell">
+      <header class="clinic-header">
+        <div class="header-left">
+          <div class="logo">📊 Dashboard</div>
+          <p class="tagline">A quick overview of clinic performance.</p>
+        </div>
+        <a class="header-link" href="../index.html">Back Home</a>
+      </header>
 
-    <h1>Dashboard</h1>
-    <p>Overview stats for patients, appointments, and medicines.</p>
+      <nav class="top-nav" aria-label="Dashboard navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="patients.html">Patients</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="medicines.html">Medicines</a></li>
+          <li><a href="billing.html">Billing</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
 
-    <div class="container">
-      <h2>Clinic Summary</h2>
-      <p>Today’s key updates at a glance.</p>
-      <ul>
-        <li>Patients registered: 42</li>
-        <li>Appointments today: 8</li>
-        <li>Medicines low in stock: 3</li>
-      </ul>
+      <main class="doctor-main">
+        <section class="section-block doctor-summary">
+          <div class="section-heading">
+            <h1>Dashboard</h1>
+            <p>Overview stats for patients, appointments, and medicines.</p>
+          </div>
+
+          <div class="doctor-overview">
+            <div class="overview-card">
+              <strong>42</strong>
+              <span>Patients registered</span>
+            </div>
+            <div class="overview-card">
+              <strong>8</strong>
+              <span>Appointments today</span>
+            </div>
+            <div class="overview-card">
+              <strong>3</strong>
+              <span>Medicines low in stock</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-heading">
+            <h2>Clinic Summary</h2>
+            <p>Today’s key updates at a glance.</p>
+          </div>
+
+          <div class="doctor-grid">
+            <article class="doctor-card">
+              <h3>Patient activity</h3>
+              <p>New registrations and follow-up visits are trending positively this week.</p>
+              <ul class="doctor-meta">
+                <li>+6 new patients</li>
+                <li>4 urgent follow-ups</li>
+              </ul>
+            </article>
+
+            <article class="doctor-card">
+              <h3>Appointment flow</h3>
+              <p>Morning sessions are running smoothly with a strong patient turnout.</p>
+              <ul class="doctor-meta">
+                <li>8 visits scheduled</li>
+                <li>2 rescheduled</li>
+              </ul>
+            </article>
+
+            <article class="doctor-card">
+              <h3>Inventory note</h3>
+              <p>Some essential medicines need restocking before the weekend rush.</p>
+              <ul class="doctor-meta">
+                <li>3 items low</li>
+                <li>1 item out of stock</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </main>
     </div>
   </body>
 </html>

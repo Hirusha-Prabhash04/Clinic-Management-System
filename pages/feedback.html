@@ -5,41 +5,58 @@
     <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
+    <div class="page-shell">
+      <header class="clinic-header">
+        <div class="header-left">
+          <div class="logo">💬 Feedback</div>
+          <p class="tagline">We value your experience and suggestions.</p>
+        </div>
+        <a class="header-link" href="../index.html">Back Home</a>
+      </header>
 
-    <nav>
+      <nav class="top-nav" aria-label="Feedback navigation">
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="patients.html">Patients</a></li>
-            <li><a href="appointments.html">Appointments</a></li>
-            <li><a href="medicines.html">Medicines</a></li>
-            <li><a href="billing.html">Billing</a></li>
-            <li><a href="doctors.html">Doctors</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="patients.html">Patients</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="medicines.html">Medicines</a></li>
+          <li><a href="billing.html">Billing</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
         </ul>
-    </nav>
+      </nav>
 
-    <h1>Patient Feedback</h1>
+      <main class="doctor-main">
+        <section class="section-block">
+          <div class="section-heading">
+            <h1>Patient Feedback</h1>
+            <p>Share your experience with our clinic.</p>
+          </div>
 
-    <form>
-        <label>Patient Name:</label><br>
-        <input type="text"><br><br>
+          <article class="doctor-card">
+            <form>
+              <label>Patient Name:</label><br>
+              <input type="text"><br><br>
 
-        <label>Rating:</label><br>
-        <select>
-            <option>Excellent</option>
-            <option>Good</option>
-            <option>Average</option>
-            <option>Poor</option>
-        </select><br><br>
+              <label>Rating:</label><br>
+              <select>
+                  <option>Excellent</option>
+                  <option>Good</option>
+                  <option>Average</option>
+                  <option>Poor</option>
+              </select><br><br>
 
-        <label>Comments:</label><br>
-        <textarea rows="5" cols="30"></textarea><br><br>
+              <label>Comments:</label><br>
+              <textarea rows="5" cols="30"></textarea><br><br>
 
-        <input type="submit" value="Submit Feedback">
-    </form>
-
+              <input type="submit" value="Submit Feedback">
+            </form>
+          </article>
+        </section>
+      </main>
+    </div>
 </body>
 </html>
