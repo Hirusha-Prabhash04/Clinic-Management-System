@@ -33,28 +33,46 @@
         <section class="section-block">
           <div class="section-heading">
             <h1>Patient Feedback</h1>
-            <p>Share your experience with our clinic.</p>
+            <p>Share your experience with our clinic and help us improve care.</p>
           </div>
 
-          <article class="doctor-card">
-            <form>
-              <label>Patient Name:</label><br>
-              <input type="text"><br><br>
+          <div class="doctor-grid" style="grid-template-columns: 1.1fr 0.9fr;">
+            <article class="doctor-card">
+              <h3>Share your experience</h3>
+              <form style="display:grid; gap:12px;">
+                <label>
+                  Patient Name
+                  <input type="text" style="width:100%; padding:10px; border:1px solid #dbeafe; border-radius:10px; margin-top:6px;" />
+                </label>
 
-              <label>Rating:</label><br>
-              <select>
-                  <option>Excellent</option>
-                  <option>Good</option>
-                  <option>Average</option>
-                  <option>Poor</option>
-              </select><br><br>
+                <label>
+                  Rating
+                  <select style="width:100%; padding:10px; border:1px solid #dbeafe; border-radius:10px; margin-top:6px;">
+                    <option>Excellent</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                  </select>
+                </label>
 
-              <label>Comments:</label><br>
-              <textarea rows="5" cols="30"></textarea><br><br>
+                <label>
+                  Comments
+                  <textarea rows="5" style="width:100%; padding:10px; border:1px solid #dbeafe; border-radius:10px; margin-top:6px;"></textarea>
+                </label>
 
-              <input type="submit" value="Submit Feedback">
-            </form>
-          </article>
+                <button type="submit" class="btn btn-primary" style="border:none; cursor:pointer;">Submit Feedback</button>
+              </form>
+            </article>
+
+            <article class="doctor-card">
+              <h3>Recent patient notes</h3>
+              <ul class="doctor-meta">
+                <li>“The staff were friendly and very professional.”</li>
+                <li>“Appointments were well organized and on time.”</li>
+                <li>“The clinic environment felt calm and welcoming.”</li>
+              </ul>
+            </article>
+          </div>
         </section>
       </main>
     </div>
