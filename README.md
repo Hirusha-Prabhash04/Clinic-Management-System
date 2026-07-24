@@ -98,7 +98,7 @@ Clinic-Management-System/
 
 - **H.S.B. Edirisooriya** (GWU-HICT-2022-07)
 - **K.M.T. Hansamal** (GWU-HICT-2022-46)
-- **W.M.B.D. Wihethunga** (GWU-HICT-2022-67)
+- **W.M.B.D. Wijethunga** (GWU-HICT-2022-67)
 - **A.H.M.A.K. Aberathna** (GWU-HICT-2022-56)
 - **W.H.H.P. Hettiarachchi** (GWU-HICT-2022-04)
 
